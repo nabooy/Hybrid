@@ -13,7 +13,7 @@
 		<script src="js/Route.js"></script>
 		<script>
 			$( document ).ready(function() {
-				go('Index', 'run', 'Index', 'body', {plugin:'Index'});
+				go('Auth', 'run', 'Index', 'body', {plugin:'Index'});
 			});
 		</script>
 	</head>
