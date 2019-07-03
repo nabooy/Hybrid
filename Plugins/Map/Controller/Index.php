@@ -7,9 +7,17 @@
 			set::view('Resurce', 'Modal', []);
 		}
 		
+		public function mapsPath(){
+			set::view('Map', 'Paths', [
+				'Result'=>$this->allResultMapPath()
+			]);
+		}
+		
 		public function Maps(){
 			$Auth = $this->getUserByID();
-			$this->mapsPath();
+			if($Auth['Map_ID']!=0){
+				$this->mapsPath();
+			}
 			set::view('Map', 'Maps', [
 				'UserMapID'=>$Auth['Map_ID'],
 				'Result'=>$this->allResult()
@@ -38,12 +46,6 @@
 			set::view('Map', 'Objects', [
 				'MapID'=>$a['id'],
 				'Result'=>$this->allResultAttribute()
-			]);
-		}
-		
-		public function mapsPath(){
-			set::view('Map', 'Paths', [
-				'Result'=>$this->allResultMapPath()
 			]);
 		}
 	}

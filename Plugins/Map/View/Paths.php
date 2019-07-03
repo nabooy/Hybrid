@@ -1,3 +1,4 @@
+<?Php var_dump($Result); ?>
 <tr>
 	<td colspan="2">
 		<nav aria-label="breadcrumb">
